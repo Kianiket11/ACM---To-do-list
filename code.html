@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stylish To-Do List (HTML & CSS)</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(120deg, #89f7fe, #66a6ff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .todo-container {
+            background: #ffffff;
+            width: 360px;
+            padding: 28px;
+            border-radius: 14px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            text-align: center;
+            color: #4a6cf7;
+            margin-bottom: 22px;
+            letter-spacing: 1px;
+        }
+
+        .fake-input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px dashed #b3c7ff;
+            background: #f5f8ff;
+            color: #6b7cff;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
+        .note {
+            font-size: 12px;
+            color: #888;
+            margin-bottom: 18px;
+            text-align: center;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            background: linear-gradient(90deg, #fdfbfb, #ebedee);
+            padding: 12px;
+            margin-bottom: 12px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        li:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+        }
+
+        input[type="checkbox"] {
+            accent-color: #4a6cf7;
+            width: 18px;
+            height: 18px;
+        }
+
+        .task {
+            flex: 1;
+            color: #333;
+            font-size: 15px;
+        }
+
+        input[type="checkbox"]:checked + .task {
+            text-decoration: line-through;
+            color: #999;
+        }
+
+        .delete-btn {
+            background: linear-gradient(135deg, #ff6a6a, #ff3d3d);
+            color: white;
+            padding: 6px 10px;
+            border-radius: 6px;
+            font-size: 12px;
+            box-shadow: 0 3px 8px rgba(255,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+
+<div class="todo-container">
+    <h2>My To-Do List</h2>
+
+    <div class="fake-input">Add new task</div>
+
+    <ul>
+        <li>
+            <input type="checkbox">
+            <span class="task">Learn HTML basics</span>
+            <span class="delete-btn">Delete</span>
+        </li>
+        <li>
+            <input type="checkbox">
+            <span class="task">Practice CSS styling</span>
+            <span class="delete-btn">Delete</span>
+        </li>
+        <li>
+            <input type="checkbox">
+            <span class="task">Create small UI projects</span>
+            <span class="delete-btn">Delete</span>
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>
